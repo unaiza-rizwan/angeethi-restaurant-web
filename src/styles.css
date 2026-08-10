@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400&display=swap');
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; padding: 0; }
+body { font-family: 'Work Sans', sans-serif; background: #181310; }
+
+.ang-display { font-family: 'Anton', sans-serif; letter-spacing: 0.02em; }
+.ang-serif { font-family: 'Fraunces', serif; }
+
+@keyframes emberRise {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.9; }
+  80% { opacity: 0.5; }
+  100% { transform: translateY(-70vh) translateX(20px); opacity: 0; }
+}
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.85; }
+  50% { opacity: 1; }
+  72% { opacity: 0.9; }
+}
+.ang-flicker { animation: flicker 3.5s ease-in-out infinite; }
+
+.ang-navlink {
+  position: relative; background: none; border: none; cursor: pointer;
+  color: #c9c0b3; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase;
+  transition: color 0.25s ease; font-family: 'Work Sans', sans-serif; padding: 0;
+}
+.ang-navlink:hover { color: #f2ece2; }
+.ang-navlink.active { color: #e2610f; }
+
+.ang-link-btn {
+  background: none; border: none; color: #e2610f; cursor: pointer; font-size: 14px;
+  display: inline-flex; align-items: center; gap: 6px; padding: 0; font-family: 'Work Sans', sans-serif;
+}
+
+.ang-btn-primary {
+  background: linear-gradient(135deg, #c1440e, #e2610f);
+  color: #f2ece2; border: none; padding: 14px 28px; font-size: 14px;
+  letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex; align-items: center; gap: 8px; font-family: 'Work Sans', sans-serif;
+}
+.ang-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px -8px #e2610f; }
+
+.ang-btn-outline {
+  background: transparent; color: #f2ece2; border: 1px solid rgba(242,236,226,0.3);
+  padding: 13px 27px; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase;
+  cursor: pointer; transition: border-color 0.2s ease, background 0.2s ease;
+  font-family: 'Work Sans', sans-serif;
+}
+.ang-btn-outline:hover { border-color: #d3a24a; background: rgba(211,162,74,0.08); }
+
+.ang-pill {
+  border: 1px solid; border-radius: 999px; padding: 8px 18px; font-size: 13px;
+  cursor: pointer; transition: all 0.2s ease; font-family: 'Work Sans', sans-serif;
+}
+
+.ang-menu-item { border-bottom: 1px solid rgba(242,236,226,0.08); padding: 20px 0; transition: padding-left 0.25s ease; }
+.ang-menu-item:hover { padding-left: 10px; border-color: rgba(211,162,74,0.3); }
+
+.ang-card {
+  background: #0f0c0a; border: 1px solid rgba(242,236,226,0.06); padding: 32px 28px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.ang-card:hover { transform: translateY(-4px); border-color: rgba(211,162,74,0.25); }
+
+.ang-input {
+  width: 100%; background: #181310; border: 1px solid rgba(242,236,226,0.15);
+  color: #f2ece2; padding: 12px 14px; font-family: 'Work Sans', sans-serif;
+  font-size: 14px; outline: none; transition: border-color 0.2s ease;
+}
+.ang-input:focus { border-color: #e2610f; }
+.ang-label {
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;
+  color: #c9c0b3; margin-bottom: 6px; display: block;
+}
+
+@media (max-width: 860px) {
+  .ang-hide-mobile { display: none !important; }
+  .ang-mobile-toggle { display: block !important; }
+  .ang-hero-title { font-size: 15vw !important; }
+  .ang-grid-2 { grid-template-columns: 1fr !important; }
+  .ang-grid-3 { grid-template-columns: 1fr !important; }
+  .ang-grid-4 { grid-template-columns: 1fr 1fr !important; }
+}
