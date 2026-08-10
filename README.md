@@ -3,6 +3,8 @@
 A multi-page React website built for a fictional Karachi coal-fire grill house,
 created as a freelance portfolio demo piece.
 
+**Live Demo:** https://angeethi-restaurant-plum.vercel.app/
+
 ## Pages
 - Home — hero, story teaser, signature dishes, reviews, CTA
 - Menu — full categorized menu with filter pills
